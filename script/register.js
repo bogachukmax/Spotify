@@ -83,9 +83,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //3
 // Отримання даних користувача
-const storedUser = localStorage.getItem();
+
+
+// const storedUser = localStorage.getItem()
 if (storedUser) {
     const user = JSON.parse(storedUser);
     console.log(user.username);
 }
 
+console.log('!!!');
