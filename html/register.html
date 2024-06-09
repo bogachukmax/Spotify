@@ -8,6 +8,22 @@
    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-   
+   <div class="container">
+      <div id="login-form" class="form">
+          <h2>Логін</h2>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button>Ввійти</button>
+          <p>Не маєте ще акаунта? <a href="#" id="show-register">Реєструйтеся тут</a></p>
+      </div>
+      <div id="register-form" class="form hidden">
+          <h2>Реєстрація</h2>
+          <input type="text" placeholder="Username" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button>Зареєструватися</button>
+          <p>Вже є акаунт? <a href="#" id="show-login">Натисніть тут</a></p>
+      </div>
+  </div>
 </body>
 </html>
