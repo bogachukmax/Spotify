@@ -1,0 +1,11 @@
+/* fonts */
+
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/Circular/CircularStd-Bold.otf);
+}
+
+@font-face {
+    font-family: Circular2;
+    src: url(../fonts/Circular/CircularStd-Medium.otf);
+}
