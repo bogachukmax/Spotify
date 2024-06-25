@@ -7,3 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
         regPage.classList.toggle('displayBlock')
     })
 })
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const icons = document.querySelectorAll('.icon');
+
+//     icons.forEach(icon => {
+//         icon.addEventListener('click', () => {
+//             icons.forEach(i => i.classList.remove('active'));
+//             icon.classList.add('active');
+//             icon.querySelector('i').style.color = '#fff';
+//             icons.forEach(i => {
+//                 if (i !== icon) {
+//                     i.querySelector('i').style.color = '#1DB954'
+//                 }
+//             });
+//             alert(`Вибрано: ${icon.CDATA_SECTION_NODE.type}`);
+//         });
+//     });
+// });
