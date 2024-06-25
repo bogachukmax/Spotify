@@ -127,9 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 let c = +selector.value
                 let d = +year.value
                 d.length === 4
-                if((c === 1 || 3 || 5 || 7 || 8 || 10 || 12 && day <= 31) || (c === 4 || 6 || 9 || 11 && day <= 30) || (c === 2 && day <= 28)){
-                    console.log('test');
+                if(d > 2024 || b < 1){
+                    console.log('Error');
+                    return
                 }
+                if((c === 4 || 6 || 9 || 11 && b > 30)){
+                    console.log('test');
+                    return
+                } 
+                if(c === 2 && b > 29 && d % 400 === 0){
+                    console.log('test2');
+                    return
+                } 
+                if(c === 2 && b > 28){
+                    console.log('test3');
+                    return
+                } 
             })
             console.log(dataUser)
         })

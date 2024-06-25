@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var volumeBar = document.getElementById("volumeBar");
     var currentTimeDisplay = document.getElementById("currentTime");
     var durationDisplay = document.getElementById("duration");
-
     // Оновлення seekBar при відтворенні
     audio.addEventListener("timeupdate", function() {
         var value = (audio.currentTime / audio.duration) * 100;
