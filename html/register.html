@@ -114,11 +114,22 @@
                                                 <option value="11" id="opt_11">November</option>
                                                 <option value="12" id="opt_12">December</option>
                                             </select>
-                                            <input type="text" id="year" placeholder="yyyy">
+                                            <input type="text" id="year" placeholder="yyyy" maxlength="4">
                                         </div>
                                         <div class="gender">
                                             <p style="color: white; font-family: Circular; font-size: 15px;">Gender</p>
-                                            <p class="aboutP">We use your gender to help personalize our content recommendations and ads for you.</p>
+                                            <p class="aboutP2">We use your gender to help personalize our content recommendations and ads for you.</p>
+                                            
+                                            <form class="forma">
+                                                <div class="radio">
+                                                    <input type="radio" id="option1" name="options" value="option1" onclick="checkAndDisable(this)">
+                                                    <label for="option1">Man</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input type="radio" id="option2" name="options" value="option2" onclick="checkAndDisable(this)">
+                                                    <label for="option2">Woman</label>
+                                                </div>
+                                            </form>
                                         </div>
 
 
