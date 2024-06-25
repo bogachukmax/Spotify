@@ -106,7 +106,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const dynamic = parseInt(line2.style.width)
             line2.style.width = `${dynamic + 140}px`
 
-            
+            const input = document.getElementById('userNameReg')
+            const button = document.getElementById('regNext')
+            const day = document.getElementById('day')
+            const year = document.getElementById('year')
+            const selector = document.getElementById('selector')
+            function checkAndDisable(selectedRadio) {
+                const allRadios = document.querySelectorAll('input[type="radio"]');
+                allRadios.forEach(radio => {
+                    if (radio !== selectedRadio) {
+                        radio.disabled = true;
+                    }
+                });
+                selectedRadio.checked = true;
+            }
+
+            button.addEventListener('click', () =>{
+                let a = input.value
+                let b = +day.value
+                let c = +selector.value
+                let d = +year.value
+                d.length === 4
+                if((c === 1 || 3 || 5 || 7 || 8 || 10 || 12 && day <= 31) || (c === 4 || 6 || 9 || 11 && day <= 30) || (c === 2 && day <= 28)){
+                    console.log('test');
+                }
+            })
             console.log(dataUser)
         })
     })
