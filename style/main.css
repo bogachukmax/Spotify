@@ -244,7 +244,16 @@ img{
     background-color: #121212;
     border-radius: 0px;
     border: solid 0px;
-
+}
+#music-player {
+    width: 300px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 .playlists {
     display: grid;

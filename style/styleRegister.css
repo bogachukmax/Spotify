@@ -13,6 +13,7 @@ html, body{
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
+    position: relative;
 }
 
 .bat{
@@ -171,4 +172,264 @@ html, body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.regInps{
+    position: relative;
+}
+
+#forError{
+    display: none;
+    font-size: 12px;
+    color: red;
+    letter-spacing: 0.1px;
+    font-family: Circular;
+}
+
+.alertImg{
+    width: 20px;
+    float: left;
+    clear: both;
+    margin-right: 5px;
+}
+
+.passCreate{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.passCreate{
+    height: 400px;
+}
+
+.steps{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-left: -45px;
+}
+
+.forSq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forText{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.oneStep{
+    color: gray;
+    font-size: 17px;
+    font-family: Circular;
+    letter-spacing: 0.1px;
+}
+
+.createPass{
+    color: white;
+}
+
+.semiSquare{
+    width: 15px;
+    height: 15px;
+    border: 3px;
+    border-top: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: lightgray;
+    transform: rotate(45deg);
+    position: relative;
+    cursor: pointer;
+}
+
+.semiSquare:hover{
+    border-color: white;
+}
+
+#passRegInp{
+    background-color: #121212;
+    width: 300px;
+    border-color: gray;
+    margin-top: 2px;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inps{
+    margin-top: 30px;
+}
+
+.passList{
+    color: white;
+    font-family: Circular;
+    margin-top: 20px;
+}
+
+.passList p{
+    position: relative;
+}
+
+.rndI{
+    border: 1px solid lightgray;
+    width: 13px;
+    height: 13px;
+    padding: 1px;
+    border-radius: 100%;
+    position: absolute;
+    top: 6px;
+    font-size: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+.passListI{
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.reg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forS{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.lines{
+    display: none;
+    position: relative;
+    top: 25px;
+    width: 100%;
+    height: 2px;
+    justify-content: center;
+}
+
+.line{
+    position: absolute;
+    width: 420px;
+    height: 1px;
+    border: 1px solid lightgray;
+    /* top: 30px; */
+}
+
+.line2{
+    display: block;
+    /* top: 30px; */
+    left: -22px;
+    position: absolute;
+    height: 1px;
+    border: 1px solid #1ed760;
+}
+
+.about{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+}
+
+.aboutP{
+    color: lightgray;
+}
+
+.aboutP span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#userNameReg{
+    background-color: #121212;
+    width: 100%;
+    border-color: gray;
+    margin-top: 2px;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inps2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -10px;
+}
+
+#day{
+    background-color: #121212;
+    width: 20%;
+    border-color: gray;
+    margin-top: 2px;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.1s linear;
+}
+
+#year{
+    background-color: #121212;
+    width: 30%;
+    border-color: gray;
+    margin-top: 2px;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.1s linear;
+}
+#selector{
+    background-color: #121212;
+    width: 50%;
+    border-color: gray;
+    margin-top: 2px;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.1s linear;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#day:hover, #selector:hover, #year:hover{
+    border-color: white;
+}
+
+option:checked {
+    background-color: #dcdcdc;
+}
+
+.steps2{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin-left: -85px;
+}
+
+.upInp{
+    margin-top: 30px;
+}
+
+.midInp{
+    margin-top: 30px;
 }

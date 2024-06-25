@@ -1,0 +1,337 @@
+@import url(./fonts.css);
+
+html, body{
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: grid;
+    gap: 8px;
+    grid-template-areas:
+        "left-sidebar main-view right-sidebar"
+        "now-playing-bar now-playing-bar now-playing-bar";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+    min-height: 100%;
+    padding:8px 0 0 8px;
+    position: relative;
+    width: 100%;
+}
+.head_right{
+    display: flex;
+}
+.ak{
+    background-color: rgba(0,0,0,.7);
+    border: solid 0px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.ak img{
+    background-color: rgba(0,0,0,.7);
+    border: solid 0px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+.Dectop_bar{
+    display: flex;
+    grid-area: left-sidebar;
+    position: relative;
+    background-color: aliceblue;
+    background-color: #000;
+    flex-direction: column;
+    min-height: 0;
+    width: 72px;
+    scrollbar-color: gray #121212;
+    height: 90%;
+    
+}
+.Dectop_bar nav{
+    --panel-gap: 8px;
+    height: 90%;
+}
+.Up_bar{
+    background-color: #121212;
+    border-radius: 8px;
+    cursor: default;
+    overflow-x: hidden;
+}
+ol, ul {
+    list-style: none;
+    padding: 8px 12px;
+    margin: 0px;
+}
+.Min_bar{
+    padding: 4px 12px;
+}
+
+.Min_bar a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 40px;
+}
+.Svg-sc-ytk21e-0{
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+}
+.daun_bar{
+    background-color: #121212;
+    border-radius: 8px;
+    overflow-x: hidden;
+    margin: 8px 0 0 0;
+    display: flex;
+}
+.head_left{
+    display: flex;
+    align-items: center;
+}
+.form-control.me-2{
+    background-color: #3b3b3b;
+    width: 100%;
+    border-color: gray;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #726565;
+    border-radius: 30px;
+}
+.form-control.me-2:hover{
+    background-color: #3b3b3b;
+    width: 100%;
+    border-color: rgb(255, 255, 255);
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+}
+.Like{
+    background-color: #121212;
+    border-radius: 0px;
+    border: solid 0px;
+}
+.btn.btn-outline-success{
+    height:48px;
+    border-radius: 30px;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+.Libery header button{
+    display: flex;
+    height: 40px;
+    justify-content: flex-start;
+    min-block-size: 40px;
+    padding: 4px 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+    background-color: unset;
+    border: solid 0px;
+    align-items: center;
+}
+.Libery header{
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #121212;
+    border-radius: 8px 8px 0px 0px;
+    
+}
+.list_music_bar{
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+.list_music{
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    
+}
+.list_music li{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+img{
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+}
+
+
+.grid_container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+ 
+    background-color: #000000;
+    height: 72px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    margin: 8px;
+}
+.grid_item {
+    border: 1px solid rgba(29, 29, 29, 0.8);
+    text-align: center;
+    height: 100%;
+    display: flex;
+}
+
+.grid_item img{
+    height: 56PX;
+    width: 56PX;
+    margin: 8px;
+    border-radius: 5px;
+}
+.grid_item.i1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.grid_item.i1 .Song{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.grid_item.i1 .Song a{
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.grid_item.i1 .Song a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.Container{
+    background: #121212;
+    height: 825px;
+    border-radius: 8px;
+    
+}
+
+.Cont_head{
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head_left{
+    padding:0 0 0 24px;
+}
+.head_right{
+    padding: 0 24px 0 0 ;
+}
+.ql0zZd7giPXSnPg75NR0{
+    background-color: rgba(0, 0, 0, .7);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-flex;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.Down{
+    background-color: #000;
+    display: flex;
+    border-radius: 50px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    width: 100%;
+    height: 32px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Circular;
+}
+.Down svg{
+  width: 16px;
+  height: 16px;
+  margin: 0 5px 0 0 ;
+}
+
+.All_search{
+    margin: 16px 24px;
+    color: #fff;
+    font-family: Circular;
+    font-size: 24px;
+
+}
+.Container_search{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin-top: 25px;
+  margin-left: -12px;
+}
+.search_itrem{
+ 
+    padding: 12px;
+    font-size: 24px;
+  
+
+}
+.search_itrems{
+    background-color: rgb(220, 20, 140);
+    border-radius: 8px;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 60.25%;
+    position: relative;
+    width: 100%;
+    color: white;
+    text-decoration: nonne;
+}
+.search_itrems span{
+    hyphens: auto;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    padding: 16px;
+    position: absolute;
+    padding-inline-end: 30%;
+}
+.search_itrems img{
+    position: absolute;
+    left: 190px;
+    top: 50px;
+    transform: rotate(25deg);
+    width: 155px;
+    height: 155px;
+ }
+.search_itrem2{
+    background-color:rgb(0, 100, 80);
+}
+.search_itrem3{
+    background-color:rgb(216, 64, 0); 
+}
+.search_itrem4{
+    background-color:rgb(30, 50, 100); 
+}
+.search_itrem5{
+    background-color:rgb(119, 119, 119); 
+}
