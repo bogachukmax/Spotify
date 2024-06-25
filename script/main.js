@@ -17,8 +17,9 @@
 //     });
 // });
 
-document.querySelectorAll('.playlist').forEach(function(song) {
-    song.addEventListener('click', function() {
+
+document.querySelectorAll('.playlist').forEach(function(playlist) {
+    playlist.addEventListener('click', function() {
         var audioPlayer = document.getElementById('audioPlayer');
         var audioSource = document.getElementById('audioSource');
         audioSource.src = this.getAttribute('data-src');
