@@ -135,7 +135,7 @@ img{
     margin: 8px;
 }
 .grid_item {
-    border: 1px solid rgba(29, 29, 29, 0.8);
+
     text-align: center;
     height: 100%;
     display: flex;
@@ -162,7 +162,19 @@ img{
 .grid_item.i1 .Song a{
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.mwpJrmCgLlVkJVtWjlI1{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.mwpJrmCgLlVkJVtWjlI1 button{
+    border-radius: 0px;
+    border: solid 0px;
+    background-color: #000000;
 }
 .grid_item.i1 .Song a:hover{
     color: white;
@@ -339,4 +351,12 @@ img{
 .grup a{
     color: rgb(105, 105, 105);
     font-size: 0.875rem
+}
+.grid_item.i2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid_item.i2 audio{
+    width: 500px;
 }
