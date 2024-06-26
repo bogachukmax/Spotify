@@ -361,3 +361,16 @@ img{
 .grid_item.i2 audio{
     width: 500px;
 }
+.dropdown-menu{
+    background-color: #121212;
+    
+}
+.dropdown-item{
+    color: #fff;
+}
+.Delete{
+    background-color: rgb(216, 0, 0);
+}
+.Exit{
+    background-color: rgb(0, 192, 0);
+}
