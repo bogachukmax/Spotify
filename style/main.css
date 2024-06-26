@@ -281,6 +281,7 @@ img{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
     width: 100%;
+    cursor: pointer;
 }
 .playlist img{
    width: 85px;
