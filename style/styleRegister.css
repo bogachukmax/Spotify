@@ -78,6 +78,32 @@ html, body{
     border: 0px;
 }
 
+#regNext2{
+    display: none;
+    width: 300px;
+    height: 45px;
+    background-color: #1ed760;
+    border-radius: 30px;
+    margin-top: 25px;
+    color: black;
+    font-family: Circular;
+    padding: 10px;
+    border: 0px;
+}
+
+#regNext3{
+    display: none;
+    width: 300px;
+    height: 45px;
+    background-color: #1ed760;
+    border-radius: 30px;
+    margin-top: 25px;
+    color: black;
+    font-family: Circular;
+    padding: 10px;
+    border: 0px;
+}
+
 .forHr{
     margin-top: 25px;
     display: flex;
@@ -200,6 +226,22 @@ html, body{
     font-family: Circular;
 }
 
+#forError4{
+    display: none;
+    font-size: 13px;
+    color: red;
+    letter-spacing: 0.1px;
+    font-family: Circular;
+    margin-top: 10px;
+}
+#forError5{
+    display: none;
+    font-size: 15px;
+    color: red;
+    letter-spacing: 0.1px;
+    font-family: Circular;
+}
+
 .alertImg{
     width: 20px;
     float: left;
@@ -264,6 +306,40 @@ html, body{
 }
 
 .semiSquare:hover{
+    border-color: white;
+}
+.semiSquare2{
+    width: 15px;
+    height: 15px;
+    border: 3px;
+    border-top: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: lightgray;
+    transform: rotate(45deg);
+    position: relative;
+    cursor: pointer;
+}
+
+.semiSquare2:hover{
+    border-color: white;
+}
+.semiSquare3{
+    width: 15px;
+    height: 15px;
+    border: 3px;
+    border-top: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: lightgray;
+    transform: rotate(45deg);
+    position: relative;
+    cursor: pointer;
+}
+
+.semiSquare3:hover{
     border-color: white;
 }
 
@@ -346,6 +422,7 @@ html, body{
     position: absolute;
     height: 1px;
     border: 1px solid #1ed760;
+    transition: all 0.1s linear;
 }
 
 .about{
@@ -483,4 +560,65 @@ input[type="radio"] {
 
 input[type="radio"]:disabled + label {
     color: #ccc;
+}
+
+.forB{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.final{
+    display: none;
+}
+.checks{
+    display: flex;
+    border: 1px solid #121212;
+    border-radius: 5px;
+    background-color: rgba(182, 177, 177, 0.08);
+    padding: 15px;
+    width: 100%;
+}
+
+.checks p {
+    color: lightgray;
+    margin-left: 15px;
+}
+
+#singUpBtn{
+    width: 300px;
+    height: 45px;
+    background-color: #1ed760;
+    border-radius: 30px;
+    margin-top: 25px;
+    color: black;
+    font-family: Circular;
+    padding: 10px;
+    border: 0px;
+}
+
+.underCheck{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.blocks{
+    margin-top: 20px;
+}
+
+.checks{
+    margin-top: 10px;
+}
+
+.displayNone{
+    display: none;
+}
+
+.displayFlex{
+    display: flex;
+}
+
+.displayBlock{
+    display: block;
 }

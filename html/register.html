@@ -67,13 +67,15 @@
                                     <p><span class="rndI rnd_2"></span> <span class="passListI">1 number or special character (example: # ? ! &)</span></p>
                                     <p><span class="rndI rnd_3"></span> <span class="passListI">10 characters</span></p>
                                 </div>
+
+                                <button id="regNext2">Next</button>
                             </div>
 
                             <div class="about">
                                 <div class="forS">
                                     <div class="steps2">
                                         <div class="forSq">
-                                            <div class="semiSquare">
+                                            <div class="semiSquare2">
     
                                             </div>
                                         </div>
@@ -118,26 +120,78 @@
                                             <input type="text" id="year" placeholder="yyyy" maxlength="4">
                                         </div>
                                         <p id="forError3"> <img src="../img/alert.webp" class="alertImg" alt="#"> Invalid Date</p>
+                                        <p id="forError5"> <img src="../img/alert.webp" class="alertImg" alt="#"> You're too young!</p>
                                         <div class="gender">
                                             <p style="color: white; font-family: Circular; font-size: 15px;">Gender</p>
                                             <p class="aboutP2">We use your gender to help personalize our content recommendations and ads for you.</p>
                                             
                                             <form class="forma">
                                                 <div class="radio">
-                                                    <input type="radio" id="option1" name="options" value="1">
-                                                    <label for="option1">Man</label>
+                                                    <input type="radio" id="option1" name="options" value="man">
+                                                    <label for="option1" id="label1">Man</label>
                                                 </div>
                                                 <div class="radio">
-                                                    <input type="radio" id="option2" name="options" value="2">
-                                                    <label for="option2">Woman</label>
+                                                    <input type="radio" id="option2" name="options" value="woman">
+                                                    <label for="option2" id="label2">Woman</label>
                                                 </div>
                                             </form>
                                         </div>
 
 
                                     </div>
+
+                                    <div class="forB">
+                                        <button id="regNext3">Next</button>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="final">
+                                <div class="forS">
+                                    <div class="steps2">
+                                        <div class="forSq">
+                                            <div class="semiSquare3">
+    
+                                            </div>
+                                        </div>
+    
+                                        <div class="forText">
+                                            <p class="oneStep">Step 3 of 3 <br> <span class="createPass">Terms & Conditions</span></p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="blocks">
+                                    <div class="checks">
+                                        <div>
+                                            <input type="checkbox" id="check1">
+                                        </div>
+                                        <p>I would prefer not to receive marketing <br> messages from Spotify</p>
+                                    </div>
+                                    <div class="checks">
+                                        <div>
+                                            <input type="checkbox" id="check2">
+                                        </div>
+                                        <p>Share my registration data with Spotify's <br> content providers for marketing <br> purposes.</p>
+                                    </div>
+                                    <div class="checks">
+                                        <div>
+                                            <input type="checkbox" id="check3">
+                                        </div>
+                                        <p>
+                                            I agree to the <span style="color: #1ed760; cursor: pointer; text-decoration: underline;">Spotify Terms and <br> Conditions of Use</span>and <span style="color: #1ed760; cursor: pointer; text-decoration: underline;">Privacy Policy</span>.
+                                        </p>
+                                    </div>
+                                    <p id="forError4"> <img src="../img/alert.webp" class="alertImg" alt="#"> Please accept the terms and conditions to continue.</p>
+                                </div>
+
+                                <div class="underCheck">
+                                    <button id="singUpBtn">Sign Up</button>
+                                </div>
+                            </div>
+
+
     
                             <button id="regNext">Next</button>
                         </div>

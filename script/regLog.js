@@ -11,7 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const lines = document.querySelector('.lines')
     const line2 = document.querySelector('.line2')
     const about = document.querySelector('.about')
+    const final = document.querySelector('.final')
 
+    function away(block){
+        block.style.display = `none`
+    }
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve()
@@ -29,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(!a.includes('@') || a.length < 5){
                     emailReg.style.borderColor = `red`
                     error.style.display = `block`
-                    reject('error')
                 } else{
                     emailReg.style.borderColor = `lightgray`
                     error.style.display = `none`
@@ -40,9 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     regInps.style.display = `none`
                     textReg.style.display = `none`
                     passCreate.style.display = `flex`
+                    button.style.display = `none`
+
+                    // forHr.classList.add('displayNone')
+                    // int.classList.add('displayNone')
+                    // forHr2.classList.add('displayNone')
+                    // backToLog.classList.add('displayNone')
+                    // regInps.classList.add('displayNone')
+                    // textReg.classList.add('displayNone')
+                    // passCreate.classList.add('displayFlex')
+                    // button.classList.add('displayNone')
                     const dataUser = {email: a}
                     resolve(dataUser)
                 }
+                emailReg.value = ''
             })
         })
     })
@@ -54,7 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const round1 = document.querySelector('.rnd_1')
             const round2 = document.querySelector('.rnd_2')
             const round3 = document.querySelector('.rnd_3')
+            const back = document.getElementById('semiSquare')
+            button.style.display = `block`
             lines.style.display = `flex`
+            
+
+            back.addEventListener('click', () => {
+                forHr.style.display = `none`
+                int.style.display = `none`
+                forHr2.style.display = `none`
+                backToLog.style.display = `none`
+                regInps.style.display = `none`
+                textReg.style.display = `none`
+                passCreate.style.display = `flex`
+                button.style.display = `none`
+            })
+
             input.addEventListener('input', () => {
                 let a = input.value
                 const regex = /[0-9#?!&]/
@@ -91,11 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const letterRegex = /[a-zA-Z]/
                 if(letterRegex.test(a) && regex.test(a) && a.length >= 10){
                     dataUser.password = a
+                    button.style.display = `none`
                     resolve(dataUser)
+                    a = ''
                 } else{
-                    reject('Error')
+                    console.log("error");
                 }
             })
+
         })
     })
 
@@ -107,23 +139,19 @@ document.addEventListener('DOMContentLoaded', () => {
             line2.style.width = `${dynamic + 140}px`
 
             const input = document.getElementById('userNameReg')
-            const button = document.getElementById('regNext')
+            const button = document.getElementById('regNext3')
             const day = document.getElementById('day')
             const year = document.getElementById('year')
             const selector = document.getElementById('selector')
             const error = document.getElementById('forError2')
             const error2 = document.getElementById('forError3')
+            const error3 = document.getElementById('forError5')
             const option1 = document.getElementById('option1')
-            const option2 = document.getElementById('option1')
-            function checkAndDisable(selectedRadio) {
-                const allRadios = document.querySelectorAll('input[type="radio"]');
-                allRadios.forEach(radio => {
-                    if (radio !== selectedRadio) {
-                        radio.disabled = true;
-                    }
-                });
-                selectedRadio.checked = true;
-            }
+            const option2 = document.getElementById('option2')
+            const label = document.getElementById('label1')
+            const label2 = document.getElementById('label2')
+            button.style.display = `block`
+
 
             day.addEventListener('input', () => {
                 if(isNaN(day.value) || day.value.length > 2){
@@ -139,13 +167,24 @@ document.addEventListener('DOMContentLoaded', () => {
             })
 
             button.addEventListener('click', () =>{
+                let currentYear = new Date().getFullYear()
                 let a = input.value
                 let b = +day.value
                 let c = +selector.value
                 let d = +year.value
-                let e = +option1.value
-                let f = +option2.value
                 let s;
+                label.style.color = `white`
+                label2.style.color = `white`
+
+                if(option1.checked){
+                    s = 'man'
+                } else if(option2.checked){
+                    s = 'woman'
+                } else{
+                    label.style.color = `red`
+                    label2.style.color = `red`
+                }
+                
 
                 if(a.length === 0){
                     error.style.display = `block`
@@ -168,8 +207,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else{
                     error2.style.display = `none`
                 }
-                
-                if(d > 2024 || b < 1 || b > 31){
+
+                for(let i = 0; i <= 13; i++){
+                    if(d === (currentYear - i)){
+                        error3.style.display = `block`
+                        return
+                    }
+                    error3.style.display = `none`
+                }
+            
+
+                if(d > currentYear || b < 1 || b > 31){
                     error2.style.display = `block`
                     return
                 } else{
@@ -197,32 +245,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 }else{
                     error2.style.display = `none`
                 }
-
-                if(option1.checked === true){
-                    return s = 'man'
-                } else{
-                    console.log('error');
-                }
-                if(option1.checked === true){
-                    return s = 'woman'
-                } else{
-                    console.log('error');
-                }
-                
-
-
-
+                dataUser.userName = a
+                dataUser.dateOfBirth = `${b}.${c}.${d}`
+                dataUser.sex = s
+                away(about)
+                resolve(dataUser)
                 input.value = ''
                 day.value = ''
                 selector.value = 0
                 year.value = ''
             })
-            console.log(dataUser)
         })
     })
 
+    .then((dataUser) => {
+        return new Promise((resolve, reject) => {
+            const dynamic = parseInt(line2.style.width)
+            line2.style.width = `${dynamic + 140}px`
+            final.style.display = `block`
+            const check = document.getElementById('check1')
+            const check2 = document.getElementById('check2')
+            const check3 = document.getElementById('check3')
+            const button = document.getElementById('singUpBtn')
+            const error = document.getElementById('forError4')
+            button.addEventListener('click', () => {
+                if(check.checked && check2.checked && check3.checked){
+                    error.style.display = `none`
+                    localStorage.setItem('userData', JSON.stringify(dataUser))
+                    location.href = '../html/main.html'
+                    resolve('Succes Reg!')
+                } else{
+                    error.style.display = `block`
+                }
+            })
+        })
+    })
 
     .catch((err) => {
         console.log(err);
+    })
+    .finally(() => {
+        console.log('Final!');
     })
 })
