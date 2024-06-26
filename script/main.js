@@ -19,8 +19,8 @@
 
 document.querySelectorAll('.playlist').forEach(function(song) {
     song.addEventListener('click', function() {
-        var audioPlayer = document.getElementById('audioPlayer');
-        var audioSource = document.getElementById('audioSource');
+        let audioPlayer = document.getElementById('audioPlayer');
+        let audioSource = document.getElementById('audioSource');
         audioSource.src = this.getAttribute('data-src');
         audioPlayer.load();
         audioPlayer.play();
