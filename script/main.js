@@ -23,6 +23,8 @@ document.querySelectorAll('.playlist').forEach(function(song) {
         let audioSource = document.getElementById('audioSource');
         audioSource.src = this.getAttribute('data-src');
         audioPlayer.load();
-        audioPlayer.play();
+        audioPlayer.addEventListener('canplay', function() {
+            audioPlayer.play();
+        }, { once: true });
     });
 });
