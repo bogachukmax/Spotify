@@ -90,6 +90,7 @@
                                         <form name="userName" style="color: white; font-family: Circular; font-size: 15px;">Name</form>
                                         <form name="userName" class="aboutP">This name will appear on your profile</form>
                                         <input type="text" name="userName" id="userNameReg">
+                                        <p id="forError2"> <img src="../img/alert.webp" class="alertImg" alt="#"> Invalid Name</p>
                                     </div>
                                     
                                     <div class="midInp">
@@ -116,17 +117,18 @@
                                             </select>
                                             <input type="text" id="year" placeholder="yyyy" maxlength="4">
                                         </div>
+                                        <p id="forError3"> <img src="../img/alert.webp" class="alertImg" alt="#"> Invalid Date</p>
                                         <div class="gender">
                                             <p style="color: white; font-family: Circular; font-size: 15px;">Gender</p>
                                             <p class="aboutP2">We use your gender to help personalize our content recommendations and ads for you.</p>
                                             
                                             <form class="forma">
                                                 <div class="radio">
-                                                    <input type="radio" id="option1" name="options" value="option1" onclick="checkAndDisable(this)">
+                                                    <input type="radio" id="option1" name="options" value="1">
                                                     <label for="option1">Man</label>
                                                 </div>
                                                 <div class="radio">
-                                                    <input type="radio" id="option2" name="options" value="option2" onclick="checkAndDisable(this)">
+                                                    <input type="radio" id="option2" name="options" value="2">
                                                     <label for="option2">Woman</label>
                                                 </div>
                                             </form>

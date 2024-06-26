@@ -111,6 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const day = document.getElementById('day')
             const year = document.getElementById('year')
             const selector = document.getElementById('selector')
+            const error = document.getElementById('forError2')
+            const error2 = document.getElementById('forError3')
+            const option1 = document.getElementById('option1')
+            const option2 = document.getElementById('option1')
             function checkAndDisable(selectedRadio) {
                 const allRadios = document.querySelectorAll('input[type="radio"]');
                 allRadios.forEach(radio => {
@@ -121,24 +125,97 @@ document.addEventListener('DOMContentLoaded', () => {
                 selectedRadio.checked = true;
             }
 
+            day.addEventListener('input', () => {
+                if(isNaN(day.value) || day.value.length > 2){
+                    day.value = ''
+                    return
+                }
+            })
+            year.addEventListener('input', () => {
+                if(isNaN(year.value)){
+                    year.value = ''
+                    return
+                }
+            })
+
             button.addEventListener('click', () =>{
                 let a = input.value
                 let b = +day.value
                 let c = +selector.value
                 let d = +year.value
-                if(d > 2024 || b < 1){
-                    console.log('Error');
-                    return
-                }
-                if(c === 2 && b > 28){
-                    console.log('Error3');
-                    return
-                }
-                if(c === (1 || 3 || 5 || 7 || 8 || 10 || 12) && day > 31){
-                    console.log('Error4');
-                    return
+                let e = +option1.value
+                let f = +option2.value
+                let s;
+
+                if(a.length === 0){
+                    error.style.display = `block`
+                    input.style.borderColor = `red`
+                } else{
+                    error.style.display = `none`
+                    input.style.borderColor = `lightgray`
                 }
 
+                if(isNaN(d)){
+                    error2.style.display = `none`
+                    return
+                } else {
+                    error2.style.display = `block`
+                }
+                
+                if(d.length === 0 || c === 0 || d.length === 0){
+                    error2.style.display = `block`
+                    return
+                } else{
+                    error2.style.display = `none`
+                }
+                
+                if(d > 2024 || b < 1 || b > 31){
+                    error2.style.display = `block`
+                    return
+                } else{
+                    error2.style.display = `none`
+                }
+
+                if(c === 2 && b > 28 && !((d % 4 === 0 && d % 100 !== 0) || (d % 400 === 0))){
+                    error2.style.display = `block`
+                    return
+                } else if(((d % 4 === 0 && d % 100 !== 0) || (d % 400 === 0)) && c === 2 && b > 29){
+                    error2.style.display = `block`
+                    return
+                } else{
+                    error2.style.display = `none`
+                }
+                if(c === (1 || 3 || 5 || 7 || 8 || 10 || 12) && b > 31){
+                    error2.style.display = `block`
+                    return
+                } else{
+                    error2.style.display = `none`
+                }
+                if(c === (4 || 6 || 9 || 11) && b > 30){
+                    error2.style.display = `block`
+                    return
+                }else{
+                    error2.style.display = `none`
+                }
+
+                if(option1.checked === true){
+                    return s = 'man'
+                } else{
+                    console.log('error');
+                }
+                if(option1.checked === true){
+                    return s = 'woman'
+                } else{
+                    console.log('error');
+                }
+                
+
+
+
+                input.value = ''
+                day.value = ''
+                selector.value = 0
+                year.value = ''
             })
             console.log(dataUser)
         })

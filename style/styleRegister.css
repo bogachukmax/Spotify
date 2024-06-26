@@ -185,6 +185,20 @@ html, body{
     letter-spacing: 0.1px;
     font-family: Circular;
 }
+#forError2{
+    display: none;
+    font-size: 15px;
+    color: red;
+    letter-spacing: 0.1px;
+    font-family: Circular;
+}
+#forError3{
+    display: none;
+    font-size: 15px;
+    color: red;
+    letter-spacing: 0.1px;
+    font-family: Circular;
+}
 
 .alertImg{
     width: 20px;
