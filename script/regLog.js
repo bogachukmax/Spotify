@@ -12,10 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const line2 = document.querySelector('.line2')
     const about = document.querySelector('.about')
     const final = document.querySelector('.final')
-
-    function away(block){
-        block.style.display = `none`
-    }
+    passCreate.classList.add('displayNone')
+    about.classList.add('displayNone')
+    final.classList.add('displayNone')
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve()
@@ -35,24 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     error.style.display = `block`
                 } else{
                     emailReg.style.borderColor = `lightgray`
-                    error.style.display = `none`
-                    forHr.style.display = `none`
-                    int.style.display = `none`
-                    forHr2.style.display = `none`
-                    backToLog.style.display = `none`
-                    regInps.style.display = `none`
-                    textReg.style.display = `none`
-                    passCreate.style.display = `flex`
-                    button.style.display = `none`
-
-                    // forHr.classList.add('displayNone')
-                    // int.classList.add('displayNone')
-                    // forHr2.classList.add('displayNone')
-                    // backToLog.classList.add('displayNone')
-                    // regInps.classList.add('displayNone')
-                    // textReg.classList.add('displayNone')
-                    // passCreate.classList.add('displayFlex')
-                    // button.classList.add('displayNone')
+                    forHr.classList.add('displayNone')
+                    int.classList.add('displayNone')
+                    forHr2.classList.add('displayNone')
+                    backToLog.classList.add('displayNone')
+                    regInps.classList.add('displayNone')
+                    textReg.classList.add('displayNone')
+                    passCreate.classList.add('displayFlex')
+                    button.classList.add('displayNone')
+                    lines.classList.add('displayFlex')
                     const dataUser = {email: a}
                     resolve(dataUser)
                 }
@@ -64,25 +54,30 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((dataUser) => {
         return new Promise((resolve, reject) => {
             const input = document.getElementById('passRegInp')
-            const button = document.getElementById('regNext')
+            const button = document.getElementById('regNext2')
             const round1 = document.querySelector('.rnd_1')
             const round2 = document.querySelector('.rnd_2')
             const round3 = document.querySelector('.rnd_3')
-            const back = document.getElementById('semiSquare')
-            button.style.display = `block`
-            lines.style.display = `flex`
+            const back = document.querySelector('.semiSquare')
+            button.classList.add('displayBlock')
             
 
-            // back.addEventListener('click', () => {
-            //     forHr.style.display = `none`
-            //     int.style.display = `none`
-            //     forHr2.style.display = `none`
-            //     backToLog.style.display = `none`
-            //     regInps.style.display = `none`
-            //     textReg.style.display = `none`
-            //     passCreate.style.display = `flex`
-            //     button.style.display = `none`
-            // })
+            back.addEventListener('click', () => {
+                const button2 = document.getElementById('regNext')
+                const button3 = document.getElementById('regNext3')
+                forHr.classList.remove('displayNone')
+                int.classList.remove('displayNone')
+                forHr2.classList.remove('displayNone')
+                backToLog.classList.remove('displayNone')
+                regInps.classList.remove('displayNone')
+                textReg.classList.remove('displayNone')
+                passCreate.classList.remove('displayFlex')
+                passCreate.classList.add('displayNone')
+                button2.classList.remove('displayNone')
+                button3.classList.add('displayNone')
+                lines.classList.remove('displayFlex')
+                about.classList.add('displayNone')
+            })
 
             input.addEventListener('input', () => {
                 let a = input.value
@@ -120,12 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const letterRegex = /[a-zA-Z]/
                 if(letterRegex.test(a) && regex.test(a) && a.length >= 10){
                     dataUser.password = a
-                    button.style.display = `none`
                     resolve(dataUser)
-                    a = ''
-                } else{
-                    console.log("error");
+                    passCreate.classList.remove('displayFlex')
+                    passCreate.classList.add('displayNone')
+                    about.classList.add('displayFlex')
+                    button.classList.remove('displayBlock')
+                    button.classList.add('displayNone')
                 }
+                input.value = ``
             })
 
         })
@@ -133,8 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     .then((dataUser) => {
         return new Promise((resolve, reject) => {
-            passCreate.style.display = `none`
-            about.style.display = `flex`
             const dynamic = parseInt(line2.style.width)
             line2.style.width = `${dynamic + 140}px`
 
@@ -150,8 +145,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const option2 = document.getElementById('option2')
             const label = document.getElementById('label1')
             const label2 = document.getElementById('label2')
-            button.style.display = `block`
-
+            const back = document.querySelector('.semiSquare2')
+            button.classList.add('displayBlock')
+            
+            
+            back.addEventListener('click', () => {
+                const button = document.getElementById('regNext2')
+                passCreate.classList.remove('displayNone')
+                passCreate.classList.add('displayFlex')
+                about.classList.remove('displayFlex')
+                about.classList.add('displayNone')
+                button.classList.remove('displayBlock')
+                button.classList.add('displayBlock')
+                line2.style.width = `${(dynamic + 140) - 140}px`
+            })
 
             day.addEventListener('input', () => {
                 if(isNaN(day.value) || day.value.length > 2){
@@ -248,8 +255,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 dataUser.userName = a
                 dataUser.dateOfBirth = `${b}.${c}.${d}`
                 dataUser.sex = s
-                away(about)
+                final.classList.remove('displayNone')
+                final.classList.add('displayBlock')
+                about.classList.remove('displayFlex')
+                about.classList.add('displayNone')
                 resolve(dataUser)
+                option1.checked = false
+                option2.checked = false
                 input.value = ''
                 day.value = ''
                 selector.value = 0
@@ -262,12 +274,24 @@ document.addEventListener('DOMContentLoaded', () => {
         return new Promise((resolve, reject) => {
             const dynamic = parseInt(line2.style.width)
             line2.style.width = `${dynamic + 140}px`
-            final.style.display = `block`
             const check = document.getElementById('check1')
             const check2 = document.getElementById('check2')
             const check3 = document.getElementById('check3')
             const button = document.getElementById('singUpBtn')
             const error = document.getElementById('forError4')
+            const back = document.querySelector('.semiSquare3')
+
+            back.addEventListener('click', () => {
+                const button = document.getElementById('regNext3')
+                final.classList.remove('displayBlock')
+                final.classList.add('displayNone')
+                about.classList.remove('displayNone')
+                about.classList.add('displayFlex')
+                button.classList.remove('displayNone')
+                button.classList.add('displayBlock')
+                line2.style.width = `${(dynamic + 140) - 140}px`
+            })
+
             button.addEventListener('click', () => {
                 if(check.checked && check2.checked && check3.checked){
                     error.style.display = `none`
@@ -278,6 +302,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     error.style.display = `block`
                 }
             })
+            check.checked = false
+            check2.checked = false
+            check3.checked = false
         })
     })
 
