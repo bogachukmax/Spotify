@@ -73,16 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
             lines.style.display = `flex`
             
 
-            back.addEventListener('click', () => {
-                forHr.style.display = `none`
-                int.style.display = `none`
-                forHr2.style.display = `none`
-                backToLog.style.display = `none`
-                regInps.style.display = `none`
-                textReg.style.display = `none`
-                passCreate.style.display = `flex`
-                button.style.display = `none`
-            })
+            // back.addEventListener('click', () => {
+            //     forHr.style.display = `none`
+            //     int.style.display = `none`
+            //     forHr2.style.display = `none`
+            //     backToLog.style.display = `none`
+            //     regInps.style.display = `none`
+            //     textReg.style.display = `none`
+            //     passCreate.style.display = `flex`
+            //     button.style.display = `none`
+            // })
 
             input.addEventListener('input', () => {
                 let a = input.value
