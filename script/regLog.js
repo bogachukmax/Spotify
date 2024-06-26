@@ -295,7 +295,8 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', () => {
                 if(check.checked && check2.checked && check3.checked){
                     error.style.display = `none`
-                    localStorage.setItem('userData', JSON.stringify(dataUser))
+                    const data = JSON.stringify(dataUser)
+                    localStorage.setItem('userData', data)
                     location.href = '../html/main.html'
                     resolve('Succes Reg!')
                 } else{
