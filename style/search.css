@@ -158,7 +158,7 @@ ol, ul {
     
 }
 .list_music{
-    height: 710px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     padding: 0px;
@@ -225,7 +225,7 @@ img{
 }
 .Container{
     background: #121212;
-    height: 890px;
+    height: 830px;
     border-radius: 8px;
     
 }

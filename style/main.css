@@ -102,7 +102,7 @@ ol, ul {
     
 }
 .list_music{
-    height: 710px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     padding: 0px;
