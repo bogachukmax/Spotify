@@ -158,7 +158,7 @@ ol, ul {
     
 }
 .list_music{
-    height: 650px;
+    height: 710px;
     display: flex;
     flex-direction: column;
     padding: 0px;
@@ -191,7 +191,6 @@ img{
     margin: 8px;
 }
 .grid_item {
-    border: 1px solid rgba(29, 29, 29, 0.8);
     text-align: center;
     height: 100%;
     display: flex;
@@ -226,7 +225,7 @@ img{
 }
 .Container{
     background: #121212;
-    height: 825px;
+    height: 890px;
     border-radius: 8px;
     
 }
@@ -286,7 +285,7 @@ img{
 .Container_search{
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: -12px;
 }
 .search_itrem{
@@ -334,4 +333,61 @@ img{
 }
 .search_itrem5{
     background-color:rgb(119, 119, 119); 
+}
+.grid_item {
+
+    text-align: center;
+    height: 100%;
+    display: flex;
+}
+
+.grid_item img{
+    height: 56PX;
+    width: 56PX;
+    margin: 8px;
+    border-radius: 5px;
+}
+.grid_item.i1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.grid_item.i1 .Song{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.grid_item.i1 .Song a{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.mwpJrmCgLlVkJVtWjlI1{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.mwpJrmCgLlVkJVtWjlI1 button{
+    border-radius: 0px;
+    border: solid 0px;
+    background-color: #000000;
+}
+.grid_item.i1 .Song a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.grup a{
+    color: rgb(105, 105, 105);
+    font-size: 0.875rem
+}
+.grid_item.i2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid_item.i2 audio{
+    width: 500px;
 }
