@@ -51,12 +51,12 @@
                 <button data-testid="top-bar-forward-button" aria-label="Уперед" class="ql0zZd7giPXSnPg75NR0 CWFTCu03cdDALodezHmA" disabled=""><svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16"><path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"></path></svg></button>
                 <nav class="navbar bg-body-tertiary">
                   <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                      <form id="searchForm" class="d-flex" role="search">
+                          <input class="form-control me-2" id="searchQuery" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
                   </div>
-                </nav>
+              </nav>
                </div>
             <div class="head_right">
                 <a href="">
@@ -203,12 +203,16 @@
             </div>
                 
             </div>
-            <div class="grid_item i2"></div>
+            <div class="grid_item i2"> <audio id="player" controls>
+               Your browser does not support the audio element.
+           </audio></div>
             <div class="grid_item i3"></div>
         </div>
 </div>
 
     
-<script type="module" src="../script/main.js"></script>
+<script type="module" src="../script/main.js">
+  
+</script>
 </body>
 </html>
