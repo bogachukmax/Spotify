@@ -317,7 +317,26 @@ img{
   height: 16px;
   margin: 0 5px 0 0 ;
 }
-
+.Exp_prem{
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 50px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    width: 100%;
+    height: 32px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Circular;
+}
+.Exp{
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+}
 .for_you{
     font-family: Circular;
     margin-top: 60px;
