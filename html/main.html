@@ -78,50 +78,58 @@
         </header>
 
         <div class="home_tabs">
-            <a href="main.html" class="home_tab active">All</a>
-            <a href="main_music.html" class="home_tab">Music</a>
-            <a href="main_podcasts.html" class="home_tab">Podcasts</a>
-            <a href="main_liked_songs.html" class="home_tab">Liked songs</a>
+            <button class="home_tab active" id="AllBtn">All</button>
+            <button class="home_tab" id="MusicBtn">Music</button>
+            <button class="home_tab" id="PodcastsBtn">Podcasts</button>
+            <button class="home_tab" id="LikedBtn">Liked songs</button>
         </div>
 
-        <span class="Music">Music</span>
-        <div class="playlists">
-            <div class="playlist" data-src="../audio/Audio1.mp3">
+        <span class="Music" id="MusicSpan">Music</span>
+        <div class="playlists" id="MusicPlayLists">
+            <div class="playlist" data-src="../audio/Audio1.mp3" data-id="1">
                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67616d0000b2731f0c88b6244be97fe133da71" data-testid="cover-art-image" alt="" class="mMx2LUixlnN_Fu45JpFB FqmFsMhuF4D0s35Z62Js Yn2Ei5QZn19gria6LjZj">
                 <span>"ЗА ТЕРИКОНАМИ" / МЮСЛІ</span>
+                <button class="star"></button>
             </div>
-            <div class="playlist" data-src="../audio/Audio2.mp3">
+            <div class="playlist" data-src="../audio/Audio2.mp3" data-id="2">
                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67616d0000b27397507fd22fb690cb9085a864" data-testid="cover-art-image" alt="" class="mMx2LUixlnN_Fu45JpFB FqmFsMhuF4D0s35Z62Js Yn2Ei5QZn19gria6LjZj">
                 <span>Nirvana / About A Girl</span>
+                <button class="star"></button>
             </div>
-            <div class="playlist" data-src="../audio/Audio3.mp3">
+            <div class="playlist" data-src="../audio/Audio3.mp3" data-id="3">
                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67616d0000b27384243a01af3c77b56fe01ab1" data-testid="cover-art-image" alt="" class="mMx2LUixlnN_Fu45JpFB FqmFsMhuF4D0s35Z62Js Yn2Ei5QZn19gria6LjZj">
                 <span>The Beatles / Let It Be</span>
+                <button class="star"></button>
             </div>
-            <div class="playlist" data-src="../audio/Audio4.mp3">
+            <div class="playlist" data-src="../audio/Audio4.mp3" data-id="4">
                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67616d0000b27341b41e6f7924e530a9b00f9c" data-testid="cover-art-image" alt="" class="mMx2LUixlnN_Fu45JpFB FqmFsMhuF4D0s35Z62Js Yn2Ei5QZn19gria6LjZj">
                 <span> Lil Uzi Vert / XO TOUR Llif3</span>
+                <button class="star"></button>
             </div>
-            <div class="playlist" data-src="../audio/Audio5.mp3">
+            <div class="playlist" data-src="../audio/Audio5.mp3" data-id="5">
                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67616d0000b273072e9faef2ef7b6db63834a3" data-testid="cover-art-image" alt="" class="mMx2LUixlnN_Fu45JpFB FqmFsMhuF4D0s35Z62Js Yn2Ei5QZn19gria6LjZj">
                 <span>Travis Scott / BUTTERFLY EFFECT</span>
+                <button class="star"></button>
             </div>
-            <div class="playlist" data-src="../audio/Audio6.mp3">
+            <div class="playlist" data-src="../audio/Audio6.mp3" data-id="6">
                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67616d0000b27371003a1de3c16fe9afd20607" data-testid="cover-art-image" alt="" class="mMx2LUixlnN_Fu45JpFB FqmFsMhuF4D0s35Z62Js Yn2Ei5QZn19gria6LjZj">
                 <span>"Любов, як осінь" / kavabanga Depo kolibri, Agape</span>
+                <button class="star"></button>
             </div>
-            <div class="playlist" data-src="../audio/Audio7.mp3">
+            <div class="playlist" data-src="../audio/Audio7.mp3" data-id="7">
                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67616d0000b273204d6ca5b9f0c687be9e9504" data-testid="cover-art-image" alt="" class="mMx2LUixlnN_Fu45JpFB FqmFsMhuF4D0s35Z62Js Yn2Ei5QZn19gria6LjZj">
                 <span>CHEEV / Гарно так</span>
+                <button class="star"></button>
             </div>
-            <div class="playlist" data-src="../audio/Audio8.mp3">
+            <div class="playlist" data-src="../audio/Audio8.mp3" data-id="8">
                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67616d0000b273a858133a9403cd411d5c7de4" data-testid="cover-art-image" alt="" class="mMx2LUixlnN_Fu45JpFB FqmFsMhuF4D0s35Z62Js Yn2Ei5QZn19gria6LjZj">
                 <span>Grandma`s Smuzi</span>
+                <button class="star"></button>
             </div>
         </div>
 
-        <div class="for_you">
-            <span>
+        <div class="for_you" id="ForYou">
+            <span id="SpanForYou">
                 For the user Name
             </span>
             <div class="mix_day">

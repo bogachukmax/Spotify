@@ -87,3 +87,105 @@ document.querySelectorAll('.playlist').forEach(function(song) {
         }, { once: true });
     });
 });
+
+
+//*  ==============  Для кнопок сортування  ==============
+const MusicSpan = document.getElementById("MusicSpan");
+const MusicPlayLists = document.getElementById("MusicPlayLists");
+
+const ForYou = document.getElementById("ForYou");
+const SpanForYou = document.getElementById("SpanForYou");
+
+const AllBtn = document.getElementById("AllBtn");
+const MusicBtn = document.getElementById("MusicBtn");
+const PodcastsBtn = document.getElementById("PodcastsBtn");
+const LikedBtn = document.getElementById("LikedBtn");
+
+AllBtn.addEventListener('click', ()=>{
+    AllBtn.classList.add("active");
+
+    MusicBtn.classList.remove("active");
+    PodcastsBtn.classList.remove("active");
+    LikedBtn.classList.remove("active");
+
+    MusicPlayLists.style.display = "grid";
+    MusicSpan.style.display = "block";
+    ForYou.style.display = "block";
+    SpanForYou.style.display = "block";
+
+    document.querySelectorAll('.playlist').forEach(playlist => {
+        playlist.style.display = 'block';
+    });
+})
+
+
+MusicBtn.addEventListener('click', ()=>{
+    MusicBtn.classList.add("active");
+
+    AllBtn.classList.remove("active");
+    PodcastsBtn.classList.remove("active");
+    LikedBtn.classList.remove("active");
+    
+    MusicPlayLists.style.display = "grid";
+    MusicSpan.style.display = "none";
+    ForYou.style.display = "none";
+
+    document.querySelectorAll('.playlist').forEach(playlist => {
+        playlist.style.display = 'block';
+    });
+})
+
+PodcastsBtn.addEventListener('click', ()=>{
+    PodcastsBtn.classList.add("active");
+
+    MusicBtn.classList.remove("active");
+    AllBtn.classList.remove("active");
+    LikedBtn.classList.remove("active");
+
+    MusicPlayLists.style.display = "none";
+    SpanForYou.style.display = "none";
+    ForYou.style.display = "block";
+})
+
+LikedBtn.addEventListener('click', ()=>{
+    LikedBtn.classList.add("active");
+
+    MusicBtn.classList.remove("active");
+    AllBtn.classList.remove("active");
+    PodcastsBtn.classList.remove("active");
+
+    SpanForYou.style.display = "none";
+    ForYou.style.display = "none";
+    MusicSpan.style.display = "none";
+
+    document.querySelectorAll('.playlist').forEach(playlist => {
+        const star = playlist.querySelector('button');
+        console.log(star);
+        if (!star.classList.contains('filled')) {
+            playlist.style.display = 'none';
+        }
+    });
+})
+
+const stars = document.querySelectorAll('.star');
+
+stars.forEach(star => {
+    const playlist = star.closest('.playlist');
+    const id = playlist.getAttribute('data-id');
+    const isFilled = localStorage.getItem(`star-${id}`);
+    if (isFilled === 'true') {
+        star.classList.add('filled');
+    }
+});
+
+stars.forEach(star => {
+    star.addEventListener('click', function(event) {
+        event.stopPropagation();
+        this.classList.toggle('filled');
+            
+        const playlist = this.closest('.playlist');
+        const id = playlist.getAttribute('data-id');
+        const isFilled = this.classList.contains('filled');
+        localStorage.setItem(`star-${id}`, isFilled);
+    });
+});
