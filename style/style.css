@@ -213,8 +213,23 @@ html, body{
 }
 
 
+#logErr{
+    display: none;
+    color: red;
+    font-size: 14px;
+}
+#logErr2{
+    display: none;
+    color: red;
+    font-size: 14px;
+}
 
-
+.alertImg{
+    width: 20px;
+    float: left;
+    clear: both;
+    margin-right: 5px;
+}
 
 
 .displayNone{

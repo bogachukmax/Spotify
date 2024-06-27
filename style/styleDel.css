@@ -1,0 +1,114 @@
+@import url(./fonts.css);
+
+
+html, body{
+    background-color: #121212;
+    width: 100%;
+    height: 100%;
+}
+
+.delAccPage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mainBlock{
+    width: 400px;
+    height: 710px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.bat{
+    display: flex;
+    justify-content: center;
+}
+
+.textDel{
+    margin-top: 25px;
+}
+.textDel p{
+    font-family: Circular2;
+    color: red;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 50px;
+}
+
+.checkIfSure{
+    margin-top: 30px;
+}
+
+#reasonInp{
+    background-color: #121212;
+    width: 300px;
+    border-color: gray;
+    margin-top: 2px;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checks{
+    display: flex;
+    width: 100%;
+}
+
+.checks p {
+    color: lightgray;
+    margin-left: 10px;
+    font-size: 13px;
+    padding-top: 2px;
+}
+
+.delBtns{
+    display: none;
+    justify-content: space-around;
+}
+
+#okDel{
+    color: red;
+    border-radius: 10px;
+    background-color: #121212;
+    border: 1px solid red;
+    padding: 5px 15px 5px 15px;
+    font-family: Circular;
+    transition: all 0.1s linear;
+}
+
+#okDel:hover{
+    transform: scale(105%);
+}
+
+#cancelDel{
+    color: greenyellow;
+    border-radius: 10px;
+    background-color: #121212;
+    border: 1px solid greenyellow;
+    padding: 5px 15px 5px 15px;
+    font-family: Circular;
+    transition: all 0.1s linear;
+}
+
+#cancelDel:hover{
+    transform: scale(105%);
+}
+
+#reasonInp{
+    width: 100%;
+}
+
+.spotiImg{
+    width: 40px;
+}
+.Svg-sc-6c3c1v-0 {
+    fill: #fff;
+}

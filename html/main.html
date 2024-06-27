@@ -10,9 +10,10 @@
    <link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
+
     
-<div class="main">
-    <div class="Dectop_bar">
+    <div class="main">
+        <div class="Dectop_bar">
         <nav>
             <div class="Up_bar">
                 <ul>
@@ -47,6 +48,9 @@
         </nav>
     </div>
     <div class="Container">
+        <div class="confirmBlock">
+    
+        </div>
         <header class="Cont_head">
             <div class="head_left">
                 <button data-testid="top-bar-back-button" aria-label="Назад" class="ql0zZd7giPXSnPg75NR0"><svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16"><path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path></svg></button>
@@ -63,10 +67,11 @@
                     <img src="https://th.bing.com/th/id/OIP.tgHdvqgaSSz4VF0zGp4KJwHaJW?rs=1&pid=ImgDetMain" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" alt="">
 
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Name</a></li>
-                        <li><a class="dropdown-item" href="#">1.12.2000</a></li>
-                        <li><a class="dropdown-item Exit" href="#">Exit</a></li>
-                        <li><a class="dropdown-item Delete" href="#">delete account</a></li>
+                        <li><a class="dropdown-item" id="userNameUp" href="#"></a></li>
+                        <li><a class="dropdown-item" id="userDateUp" href="#"></a></li>
+                        <li><a class="dropdown-item Exit" id="exitFromAcc" href="#">Log Out</a></li>
+                        <li><a class="dropdown-item Delete" id="deleteAcc" href="#">Delete Acc</a></li>
+                        <!-- <li><a class="dropdown-item Delete2" id="confirmDelete" type="button" href="#">Tap to confirm</a></li> -->
                       </ul>
                 </button>
             </div>
