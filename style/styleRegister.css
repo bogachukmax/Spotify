@@ -354,6 +354,7 @@ html, body{
 }
 
 .inps{
+    position: relative;
     margin-top: 30px;
 }
 
@@ -604,6 +605,34 @@ input[type="radio"]:disabled + label {
 
 .checks{
     margin-top: 10px;
+}
+
+
+#hideAndOpen{
+    position: absolute;
+    bottom: 18px;
+    right: 10px;
+    color: white;
+    /* background-image: url(../img/hide.png); */
+    /* background-image: url(../img/open.png); */
+    background-size: 100%;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 1px white);
+}
+
+#hideAndOpen:hover{
+    transform: scale(105%);
+}
+
+.hideEye{
+    background-image: url(../img/hide.png);
+}
+
+.openEye{
+    background-image: url(../img/open.png);
 }
 
 .displayNone{

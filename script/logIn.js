@@ -4,8 +4,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('logBtn')
     const err = document.getElementById('logErr')
     const err2 = document.getElementById('logErr2')
+    const passwordCheck = document.getElementById('hideAndOpen')
     const data = JSON.parse(localStorage.getItem('userData'))
     console.log(data);
+
+    passwordCheck.addEventListener('click', () => {
+        passwordCheck.classList.toggle('hideEye')
+        passwordCheck.classList.toggle('openEye')
+        if(passwordCheck.classList.contains('hideEye')){
+            passInp.type = 'password'
+            return
+        }
+        if(passwordCheck.classList.contains('openEye')){
+            passInp.type = 'text'
+            return
+        }
+        passInp.type = 'password'
+    })
 
     button.addEventListener('click', () => {
         logIn(emailInp, passInp, data, err, err2)

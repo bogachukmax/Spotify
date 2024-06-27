@@ -59,8 +59,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const round2 = document.querySelector('.rnd_2')
             const round3 = document.querySelector('.rnd_3')
             const back = document.querySelector('.semiSquare')
+            const passwordCheck = document.getElementById('hideAndOpen')
             button.classList.add('displayBlock')
             
+
+            passwordCheck.addEventListener('click', () => {
+                passwordCheck.classList.toggle('hideEye')
+                passwordCheck.classList.toggle('openEye')
+                if(passwordCheck.classList.contains('hideEye')){
+                    input.type = 'password'
+                    return
+                }
+                if(passwordCheck.classList.contains('openEye')){
+                    input.type = 'text'
+                    return
+                }
+                input.type = 'password'
+            })
 
             back.addEventListener('click', () => {
                 const button2 = document.getElementById('regNext')
