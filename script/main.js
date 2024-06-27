@@ -100,6 +100,30 @@ const AllBtn = document.getElementById("AllBtn");
 const MusicBtn = document.getElementById("MusicBtn");
 const PodcastsBtn = document.getElementById("PodcastsBtn");
 const LikedBtn = document.getElementById("LikedBtn");
+const LikeHeart = document.getElementById("LikeHeart");
+
+const stars = document.querySelectorAll('.star');
+
+stars.forEach(star => {
+    const playlist = star.closest('.playlist');
+    const id = playlist.getAttribute('data-id');
+    const isFilled = localStorage.getItem(`star-${id}`);
+    if (isFilled === 'true') {
+        star.classList.add('filled');
+    }
+});
+
+stars.forEach(star => {
+    star.addEventListener('click', function(event) {
+        event.stopPropagation();
+        this.classList.toggle('filled');
+            
+        const playlist = this.closest('.playlist');
+        const id = playlist.getAttribute('data-id');
+        const isFilled = this.classList.contains('filled');
+        localStorage.setItem(`star-${id}`, isFilled);
+    });
+});
 
 AllBtn.addEventListener('click', ()=>{
     AllBtn.classList.add("active");
@@ -145,6 +169,10 @@ PodcastsBtn.addEventListener('click', ()=>{
     MusicPlayLists.style.display = "none";
     SpanForYou.style.display = "none";
     ForYou.style.display = "block";
+
+    document.querySelectorAll('.playlist').forEach(playlist => {
+        playlist.style.display = 'block';
+    });
 })
 
 LikedBtn.addEventListener('click', ()=>{
@@ -154,38 +182,32 @@ LikedBtn.addEventListener('click', ()=>{
     AllBtn.classList.remove("active");
     PodcastsBtn.classList.remove("active");
 
+    MusicPlayLists.style.display = "grid";
     SpanForYou.style.display = "none";
     ForYou.style.display = "none";
     MusicSpan.style.display = "none";
 
     document.querySelectorAll('.playlist').forEach(playlist => {
         const star = playlist.querySelector('button');
-        console.log(star);
         if (!star.classList.contains('filled')) {
             playlist.style.display = 'none';
         }
     });
 })
 
-const stars = document.querySelectorAll('.star');
+const TableOfBtn = document.getElementById("TableOfBtn");
 
-stars.forEach(star => {
-    const playlist = star.closest('.playlist');
-    const id = playlist.getAttribute('data-id');
-    const isFilled = localStorage.getItem(`star-${id}`);
-    if (isFilled === 'true') {
-        star.classList.add('filled');
-    }
-});
-
-stars.forEach(star => {
-    star.addEventListener('click', function(event) {
-        event.stopPropagation();
-        this.classList.toggle('filled');
-            
-        const playlist = this.closest('.playlist');
-        const id = playlist.getAttribute('data-id');
-        const isFilled = this.classList.contains('filled');
-        localStorage.setItem(`star-${id}`, isFilled);
+LikeHeart.addEventListener('click', ()=>{
+    document.querySelectorAll('.playlist').forEach(playlist => {
+        const star = playlist.querySelector('button');
+        if (!star.classList.contains('filled')) {
+            playlist.style.display = 'none';
+        }
     });
-});
+
+    TableOfBtn.style.display = "none";
+    SpanForYou.style.display = "none";
+    ForYou.style.display = "none";
+    MusicPlayLists.style.display = "grid";
+    MusicSpan.style.display = "none";
+})
