@@ -168,6 +168,7 @@ PodcastsBtn.addEventListener('click', ()=>{
 
     MusicPlayLists.style.display = "none";
     SpanForYou.style.display = "none";
+    MusicSpan.style.display = "none";
     ForYou.style.display = "block";
 
     document.querySelectorAll('.playlist').forEach(playlist => {
